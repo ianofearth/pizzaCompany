@@ -8,7 +8,7 @@ describe("Pizza", function() {
 
 	it("will return the price of a pizza of entered size", function() {
 		var myPizza = new Pizza("ian", "large", []);
-		expect(myPizza.getSizePrice()).to.eq(7);
+		expect(myPizza.getPrice()).to.eq(7);
 	});
 
 	it("will return the price of a pizza of entered size", function() {
