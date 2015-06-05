@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 		$("h4.customer-name").append("<h4>Order for: " + myPizza.customerName + "</h4>");
 
-		$("h5.pizza-size").append("<h5>Size: " + myPizza.pizzaSize + "</h5>");
+		$("h5.pizza-size").append("<h5>Size: " + myPizza.pizzaSize + " with </h5>");
 
 		myPizza.toppings.forEach(function(topping) {
 			$("ul.toppings").append("<li>" + topping + "</li>");
@@ -73,8 +73,9 @@ $(document).ready(function() {
 		var totalCost = myPizza.getPrice() * quantity;
 		$("h2.total-cost").append("<h2>Your Total: $" + totalCost + ".00</h2>");
 		
-		// $(".pizza-stats").show();
-		// $(".pizza-order").hide();
+		$(".pizza-stats").show();
+		$(".pizza-order").hide();
+
 		// $("input#customer-name").val("");
 		// $("input#quantity").val("");
 		// $(".new-toppings").not(":first").remove();
