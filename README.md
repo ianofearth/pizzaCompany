@@ -1,6 +1,7 @@
 #Author Name: Ian Bevel
 #Program Name: pizzaCompany
-#Description: <p>pizzaCompany will prompt the user to enter a customer name, quantity of pizzas and toppings for the pizza.  The user can also click the add topping button to add an additional field for toppings as many times as desired.  The program will then display the total cost of the pizza(s)</p>
+#Description: 
+<p>pizzaCompany will prompt the user to enter a customer name, quantity of pizzas and toppings for the pizza.  The user can also click the add topping button to add an additional field for toppings as many times as desired.  The program will then display the total cost of the pizza(s)</p>
 #Set-up instructions: 
 <ol>
 <li>Go to www.github.com/ianofearth</li>
@@ -19,4 +20,4 @@
 #Licenses and Copywright info: <p>ianofearth License.  Copyright 2015 ianofearth industries.</p>
 #<h2>You are not granted rights or licenses to the trademarks of ianofearth industries without the express written consent of ianofearth industries.</h2>
 #Future development:
-<h2>The program needs functionality to return to a beginning state.  Styling is needed, there was no time to complete it.  Ability to create multiple pizzas without them stacking the information class together would be nice.</h2>
+<p>The program needs functionality to return to a beginning state.  Styling is needed, there was no time to complete it.  Ability to create multiple pizzas without them stacking the information class together would be nice.</p>
