@@ -6,9 +6,8 @@ describe("Pizza", function() {
 		expect(myPizza.toppings).to.eql([]);
 	});
 
-	// it("will allow the user to add a topping", function() {
-	// 	var myPizza = new Pizza("ian", ["pepperoni"]);
-	// 	expect(myPizza.customerName).to.eq("ian");
-	// 	expect(myPizza.toppings).to.eql(["pepperoni"]);
-	// });
+	it("will return the price of a pizza of entered size", function() {
+		var myPizza = new Pizza("ian", "large", []);
+		expect(myPizza.price()).to.eq(7);
+	});
 });
