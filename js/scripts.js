@@ -8,32 +8,28 @@ function Pizza(customerName, pizzaSize, toppings) {
 	this.sizePrice["large"] = 7;
 }
 
-// function Toppings(toppings) {
-// 	this.toppings = toppings
-// }
-
 Pizza.prototype.getPrice = function() {
 	var sizeTotal = this.sizePrice[this.pizzaSize];
 	
 	var toppingTotal = 0;
 	this.toppings.forEach(function(topping) {
-		if (topping === "pepperoni") {
+		if (topping === "Pepperoni") {
 			toppingTotal += 2;
-		} else if (topping === "sausage") {
+		} else if (topping === "Sausage") {
 			toppingTotal += 2;
-		} else if (topping === "bacon") {
+		} else if (topping === "Bacon") {
 			toppingTotal += 2;
-		} else if (topping === "extra-cheese") {
+		} else if (topping === "Extra-cheese") {
 			toppingTotal += 2;
-		} else if (topping === "olive") {
+		} else if (topping === "Olive") {
 			toppingTotal += 1;
-		} else if (topping === "mushroom") {
+		} else if (topping === "Mushroom") {
 			toppingTotal += 1;
-		} else if (topping === "onion") {
+		} else if (topping === "Onion") {
 			toppingTotal += 1;
-		} else if (topping === "pineaplle") {
+		} else if (topping === "Pineaplle") {
 			toppingTotal += 1;
-		} else if (topping === "garlic") {
+		} else if (topping === "Garlic") {
 			toppingTotal += 1;
 		}
 	});
@@ -51,6 +47,8 @@ $(document).ready(function() {
 		event.preventDefault();
 		
 		var allToppings = []
+		var quantity = $("input#quantity").val();
+
 		$(".new-topping").each(function() {
 			allToppings.push($(this).val());
 		});
@@ -68,15 +66,26 @@ $(document).ready(function() {
 		myPizza.toppings.forEach(function(topping) {
 			$("ul.toppings").append("<li>" + topping + "</li>");
 		});
+		// $("h5.display-toppings").append("<h5>Toppings on your Pizza: " + myPizza.toppings.forEach(function(topping) {
+		// 	$("ul.toppings").append("<li>" + topping + "</li>");
+		// }) + "</h5>");  //this returns "undefined" after the : in the title, don't know why come back to fix later
 
-		$("h2.total-cost").append("<h2>Your Total: $" + myPizza.getPrice() + ".00</h2>");
-
+		var totalCost = myPizza.getPrice() * quantity;
+		$("h2.total-cost").append("<h2>Your Total: $" + totalCost + ".00</h2>");
+		
+		// $(".pizza-stats").show();
+		// $(".pizza-order").hide();
+		// $("input#customer-name").val("");
+		// $("input#quantity").val("");
+		// $(".new-toppings").not(":first").remove();
 
 	});
+	// $("#try-again").click(function(event) {
+	// 	event.preventDefault();
+	// 	$(".pizza-order").show();
+	// 	$(".pizza-stats").hide();
+
+	// });
 });
-
-
-
-//jquery create toppings array, push topping from form into array.
 
 
