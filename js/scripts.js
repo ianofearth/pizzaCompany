@@ -41,6 +41,11 @@ Pizza.prototype.getToppingPrice = function() {
 	return toppingTotal;
 }
 
+Pizza.prototype.getTotalPrice = function() {
+	var totalPrice = this.sizeTotal + this.toppingTotal;
+	return totalPrice
+}
+
 //jquery create toppings array, push topping from form into array.
 
 

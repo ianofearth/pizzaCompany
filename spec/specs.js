@@ -31,4 +31,11 @@ describe("Pizza", function() {
 		var myPizza = new Pizza("ian", "large", ["pepperoni","sausage", "extra-cheese", "mushroom"]);
 		expect(myPizza.getToppingPrice()).to.eq(7);
 	});
+
+	it("return the price for a pizza, toppings and size", function() {
+		var myPizza = new Pizza("ian", "large", ["pepperoni","sausage", "extra-cheese", "mushroom"]);
+		myPizza.getSizePrice
+		myPizza.getToppingPrice
+		expect(myPizza.getTotalPrice()).to.eq(14);
+	});
 });
