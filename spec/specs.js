@@ -19,11 +19,16 @@ describe("Pizza", function() {
 
 	it("will return the price of a single pizza ingredient", function() {
 		var myPizza = new Pizza("ian", "large", ["pepperoni"]);
-		expect(myPizza.getToppingPrice()).to.eq(1);
+		expect(myPizza.getToppingPrice()).to.eq(2);
 	});
 
 	it("will return the price of two ingredients", function() {
 		var myPizza = new Pizza("ian", "large", ["pepperoni","sausage"]);
-		expect(myPizza.getToppingPrice()).to.eq(3);
+		expect(myPizza.getToppingPrice()).to.eq(4);
+	});
+
+	it("will return the price of 4 ingredients", function() {
+		var myPizza = new Pizza("ian", "large", ["pepperoni","sausage", "extra-cheese", "mushroom"]);
+		expect(myPizza.getToppingPrice()).to.eq(7);
 	});
 });

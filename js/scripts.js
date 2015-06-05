@@ -18,7 +18,6 @@ Pizza.prototype.getSizePrice = function() {
 Pizza.prototype.getToppingPrice = function() {
 	var toppingTotal = 0;
 	this.toppings.forEach(function(topping) {
-		console.log(topping);
 		if (topping === "pepperoni") {
 			toppingTotal += 2;
 		} else if (topping === "sausage") {
