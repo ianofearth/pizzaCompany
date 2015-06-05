@@ -67,9 +67,11 @@ $(document).ready(function() {
 
 		myPizza.toppings.forEach(function(topping) {
 			$("ul.toppings").append("<li>" + topping + "</li>");
-
 		});
-		// $("ul.toppings").append("<li>" + myPizza.toppings + "</li>");
+
+		$("h2.total-cost").append("<h2>Your Total: $" + myPizza.getPrice() + ".00</h2>");
+
+
 	});
 });
 
